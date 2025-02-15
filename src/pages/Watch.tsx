@@ -39,6 +39,28 @@ export function Watch() {
     fetchMovieData();
   }, [id]);
 
+  // Dynamically add script tags when component mounts
+  useEffect(() => {
+    const scripts = [
+      './block/blockervs.js',
+      './block/abpvn.js',
+      './block/openload.js',
+      './block/ultimateAdBlock.js'
+    ];
+
+    scripts.forEach(src => {
+      const script = document.createElement('script');
+      script.src = src;
+      script.type = 'text/javascript';
+      script.async = true;
+      document.body.appendChild(script);
+      
+      return () => {
+        document.body.removeChild(script);
+      };
+    });
+  }, []);
+
   if (!movie) {
     return (
       <div className="flex h-screen items-center justify-center bg-background">
@@ -87,6 +109,7 @@ export function Watch() {
             className="aspect-video w-full"
             allowFullScreen
             allow="fullscreen"
+            sandbox="allow-presentation allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
           />
         </div>
 

@@ -1,16 +1,6 @@
 {
   "sources": [
     {
-      "name": "Multiembed",
-      "movies": "https://multiembed.mov/directstream.php?tmdb=1&video_id={id}",
-      "shows": "https://multiembed.mov/directstream.php?tmdb=1&video_id={id}&s={season}&e={episode}"
-    },
-    {
-      "name": "Multiembed Backup",
-      "movies": "https://play.123embed.net/mv/{id}",
-      "shows": "https://play.123embed.net/tv/{id}/{season}/{episode}"
-    },
-    {
       "name": "<Embed>",
       "movies": "https://embed.su/embed/movie/{id}",
       "shows": "https://embed.su/embed/tv/{id}/{season}/{episode}"
