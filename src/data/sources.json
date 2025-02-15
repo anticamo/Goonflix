@@ -1,0 +1,54 @@
+{
+  "sources": [
+    {
+      "name": "Multiembed",
+      "movies": "https://multiembed.mov/directstream.php?tmdb=1&video_id={id}",
+      "shows": "https://multiembed.mov/directstream.php?tmdb=1&video_id={id}&s={season}&e={episode}"
+    },
+    {
+      "name": "Multiembed Backup",
+      "movies": "https://play.123embed.net/mv/{id}",
+      "shows": "https://play.123embed.net/tv/{id}/{season}/{episode}"
+    },
+    {
+      "name": "<Embed>",
+      "movies": "https://embed.su/embed/movie/{id}",
+      "shows": "https://embed.su/embed/tv/{id}/{season}/{episode}"
+    },
+    {
+      "name": "VidLink",
+      "movies": "https://vidlink.pro/movie/{id}",
+      "shows": "https://vidlink.pro/tv/{id}/{season}/{episode}"
+    },
+    {
+      "name": "Smashystream",
+      "movies": "https://player.smashy.stream/movie/{id}",
+      "shows": "https://player.smashy.stream/tv/{id}?s={season}&e={episode}"
+    },
+    {
+      "name": "123Embed",
+      "movies": "https://play2.123embed.net/movie/{id}",
+      "shows": "https://play2.123embed.net/tv/{id}/{season}/{episode}"
+    },
+    {
+      "name": "VidSrc",
+      "movies": "https://vidsrc.net/embed/movie/{id}",
+      "shows": "https://vidsrc.net/embed/show/{id}/season/{season}/episode/{episode}"
+    },
+    {
+      "name": "VidBinge",
+      "movies": "https://vidsrc.dev/embed/movie/{id}",
+      "shows": "https://vidsrc.dev/embed/show/{id}/season/{season}/episode/{episode}"
+    },
+    {
+      "name": "StreamFlix",
+      "movies": "https://streamflix.to/embed/movie/{id}",
+      "shows": "https://streamflix.to/embed/show/{id}/season/{season}/episode/{episode}"
+    },
+    {
+      "name": "Flicky",
+      "movies": "https://flicky.host/embed/movie/?id={id}",
+      "shows": "https://flicky.host/embed/tv/?id={id}/{season}/{episode}"
+    }
+  ]
+}

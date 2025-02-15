@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 24% 9%;
+    --primary: 267 100% 61%;
+    --primary-hover: 267 100% 66%;
+    --secondary: 250 24% 14%;
+    --secondary-hover: 250 24% 19%;
+    --text: 0 0% 100%;
+    --text-secondary: 250 24% 80%;
+  }
+}
+
+body {
+  @apply bg-background text-text;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+.movie-card {
+  @apply relative overflow-hidden rounded-xl transition-all duration-300;
+}
+
+.movie-card:hover {
+  @apply transform scale-[1.02] shadow-xl shadow-primary/20;
+}
+
+.movie-card-content {
+  @apply absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-background via-background/90 to-transparent p-4 opacity-0 transition-all duration-300;
+}
+
+.movie-card:hover .movie-card-content {
+  @apply opacity-100;
+}
